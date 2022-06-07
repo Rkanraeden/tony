@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+require "csv"
+
+puts "Importing types..."
+CSV.foreach(Rails.root.join("db/seeds/types.csv"), headers: true) do |row|
+  Type.create! do |type|
+    type.id = row[0]
+    type.name = row[1]
+  end
+end

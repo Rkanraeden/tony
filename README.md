@@ -1,24 +1,27 @@
-# README
+# Tony restaurant
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+USER
+    type: (admin, normal)
 
-Things you may want to cover:
+MENU
+    descripcion
+    tipos de platillo
+    nombre
 
-* Ruby version
+TIPO
+    nombre
 
-* System dependencies
+## Pasos
+<!-- creamos el modelo -->    
+rails g model Type name 
 
-* Configuration
+<!-- Agregar devise -->
+gem 'devise'
 
-* Database creation
+<!-- Instalar devise -->
+rails generate devise:install
 
-* Database initialization
+<!-- Instalar modelo -->
+rails generate devise User
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
