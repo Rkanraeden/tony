@@ -12,7 +12,9 @@
   </head>
 
   <body>
-    <main>
+    <main class="container">
+      <%= link_to menus_path, class: "button" %>
+      <%= link_to new_menu_path, class: "button" %>
       <%= yield %>
     </main>
   </body>
